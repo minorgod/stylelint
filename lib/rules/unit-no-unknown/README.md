@@ -101,6 +101,7 @@ div {
 	     '/images/some-image-3x.jpg' 3x,
 	);
 }
+```
 
 ```css
 div {
