@@ -83,3 +83,28 @@ a {
   width: 10my-other-unit;
 }
 ```
+### `ignoreValue: ["/regex/", "string"]`
+
+Given:
+
+```js
+["/[0-9]x/", "10custom"]
+```
+
+The following patterns are *not* considered violations:
+
+```css
+div {
+  background-image: image-set(
+	     '/images/some-image-1x.jpg' 1x,
+	     '/images/some-image-2x.jpg' 2x,
+	     '/images/some-image-3x.jpg' 3x,
+	);
+}
+
+```css
+div {
+  width: 10custom;
+}
+```
+
